@@ -837,6 +837,7 @@ a:hover { color: var(--navy); text-decoration-thickness: 2px; }
   color: var(--muted);
 }
 .facts-title--spaced { margin-top: 2.5rem; }
+.facts-title--social { margin-top: 1.75rem; }
 
 .edu-list { list-style: none; display: grid; gap: 1.35rem; }
 .edu-item {
