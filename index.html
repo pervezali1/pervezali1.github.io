@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+  ================================================================
+  HOW TO EDIT THIS PAGE
+  ----------------------------------------------------------------
+  * Every place you may want to change is marked with a comment
+    that starts with "EDIT:". Search this file for EDIT: to find them.
+  * Anything still to fill in is wrapped like this:
+        <span class="placeholder">[...]</span>
+    It shows with a yellow highlight on the page. Search for
+    class="placeholder" to find every one, then replace the whole
+    <span ...>...</span> with your text.
+  * Colours and fonts live in styles.css (top of the file).
+  * README.md explains everything step by step.
+  ================================================================
+-->
+
+<!-- EDIT: page title and description (browser tab and search results) -->
+<title>Pervez Ali · Mathematics, Florida State University</title>
+<meta name="description" content="Pervez Ali is a PhD researcher in mathematics at Florida State University studying Langevin, nonreversible and constrained sampling algorithms.">
+<meta name="author" content="Pervez Ali">
+
+<!-- EDIT: website address and social-sharing preview (LinkedIn, Slack, X, etc.).
+     The address https://pervezali1.github.io appears in the three lines marked "address"
+     below. If the site ever moves to another address, change all three. -->
+<link rel="canonical" href="https://pervezali1.github.io/"><!-- address -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pervez Ali · Mathematics, Florida State University">
+<meta property="og:description" content="PhD researcher studying sampling algorithms based on stochastic dynamics: Langevin methods, nonreversible dynamics and constrained sampling.">
+<meta property="og:url" content="https://pervezali1.github.io/"><!-- address -->
+<meta property="og:image" content="https://pervezali1.github.io/assets/images/social-card.png"><!-- address -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pervez Ali, PhD researcher in mathematics at Florida State University">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#F7F4EE">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">Pervez Ali</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================================================
+       INTRODUCTION
+       ============================================================ -->
+  <section class="hero" id="top" aria-labelledby="hero-name">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <!-- EDIT: name, title and university -->
+        <h1 id="hero-name">Pervez Ali</h1>
+        <p class="hero-role">PhD Researcher in Mathematics</p>
+        <p class="hero-affiliation">Florida State University</p>
+
+        <!-- EDIT: short introduction (two or three plain sentences) -->
+        <p class="hero-intro">My research studies sampling algorithms based on stochastic dynamics, with interests in Langevin methods, nonreversible dynamics, and sampling under constraints. These algorithms draw samples from complex probability distributions, as needed in Bayesian statistics and machine learning. I combine convergence analysis with numerical experiments.</p>
+
+        <!-- EDIT: availability statement -->
+        <p class="availability">Seeking postdoctoral opportunities starting July&nbsp;2027.</p>
+
+        <ul class="hero-links">
+          <li><a class="button button--primary" href="#research">Research</a></li>
+          <li><a class="button" href="#publications">Publications</a></li>
+          <li><a class="button" href="#cv">CV</a></li>
+          <li><a class="button" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Profile photo: save a square photo as assets/images/profile.jpg
+           and it appears here automatically. Until then the initials show.
+           The lines around it are decorative artwork, not research data. -->
+      <div class="portrait" aria-hidden="true">
+        <img class="portrait-orbits" src="assets/images/trajectories.svg" alt="" width="600" height="600">
+        <div class="portrait-frame">
+          <span class="portrait-initials">PA</span>
+          <span class="portrait-photo"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RESEARCH
+       ============================================================ -->
+  <section class="section" id="research" aria-labelledby="research-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 id="research-title">Research</h2>
+        <!-- EDIT: research overview -->
+        <p class="section-lede">I study how stochastic dynamics can be designed and analysed to sample efficiently from complex distributions. My current work falls under the first two themes below; the third is a direction I want to develop.</p>
+      </header>
+
+      <!-- EDIT: research themes. The first line of each theme is its status:
+           "Current research" or "Future direction". Give a future theme the
+           class "theme theme--future" so it is drawn with an open circle. -->
+      <ul class="themes">
+        <li class="theme">
+          <p class="theme-status">Current research</p>
+          <h3>Langevin dynamics and nonreversible sampling</h3>
+          <p class="theme-question">When does adding a nonreversible drift make a Langevin sampler converge faster, and how can the gain be measured?</p>
+          <p>Overdamped Langevin dynamics is the starting point for many sampling algorithms. Adding a skew-symmetric drift leaves the target distribution unchanged but changes how the process moves through it. I study when this helps, using large deviations and nonasymptotic convergence bounds.</p>
+          <figure class="equation">
+            <img src="assets/images/langevin-sde.svg" width="352" height="26" alt="d X sub t equals minus, open bracket I plus J close bracket, times the gradient of U at X sub t, d t, plus the square root of 2, d W sub t.">
+            <figcaption>Langevin dynamics with a skew-symmetric matrix <i>J</i>. The target distribution π&nbsp;∝&nbsp;e<sup>−<i>U</i></sup> is invariant for every such <i>J</i>.</figcaption>
+          </figure>
+        </li>
+        <li class="theme">
+          <p class="theme-status">Current research</p>
+          <h3>Constrained sampling and stochastic algorithms</h3>
+          <p class="theme-question">How can we sample efficiently from a distribution restricted to a constrained set, especially when only noisy gradients are available?</p>
+          <p>Many models in statistics and machine learning have parameters that must stay in a bounded or convex set. Penalty, projection and reflection methods handle the constraint in different ways, and stochastic-gradient versions make them practical for large datasets. I study how nonreversible dynamics can be combined with these methods, and what can be proved about their accuracy.</p>
+        </li>
+        <li class="theme theme--future">
+          <p class="theme-status">Future direction</p>
+          <h3>Connections between sampling and generative AI</h3>
+          <p class="theme-question">What can the analysis of sampling algorithms say about generative models that are built on stochastic dynamics?</p>
+          <p>Diffusion-based generative models create new data by simulating stochastic differential equations, so questions about discretization error, convergence and efficient dynamics carry over from sampling. This is a direction I plan to develop in postdoctoral work.</p>
+        </li>
+      </ul>
+
+      <h3 class="subsection-title" id="projects">Selected projects</h3>
+      <!-- EDIT: projects. To add one, copy a whole <article class="project"> ... </article>
+           block and change the text. Links with an empty address (href="") are hidden
+           automatically, so you can leave "Code" empty until you have a link.
+           Optional figure: see the first project. -->
+      <div class="projects">
+
+        <article class="project">
+          <div class="project-body">
+            <p class="project-meta"><span>2026</span><span>with Weihao Dong and Xiaoyu Wang</span></p>
+            <h4>Penalized nonreversible Langevin for constrained sampling</h4>
+            <p>Sampling on a compact convex set by combining a squared-distance penalty with a skew-symmetric perturbation of Langevin dynamics. The preprint gives nonasymptotic bounds relative to the penalized target: in total variation with full gradients, including nonconvex potentials, and in 2-Wasserstein distance with stochastic gradients. For a quadratic model, tuning the perturbation improves the sufficient number of iterations from linear to logarithmic in the curvature ratio.</p>
+            <ul class="link-list">
+              <li><a href="https://arxiv.org/abs/2609.25381">Preprint (arXiv:2609.25381)</a></li>
+              <li><a href="">Code</a></li>
+            </ul>
+          </div>
+          <!-- EDIT: optional figure. To use one: save the image in assets/images/,
+               then replace the whole <div class="figure-placeholder">...</div> below with
+                 <img src="assets/images/YOUR-FIGURE.png" alt="What the figure shows" width="800" height="600">
+               and write a caption. To remove it, delete from <figure> to </figure>. -->
+          <figure class="project-figure">
+            <div class="figure-placeholder"><span>Optional figure<br>Add an image to assets/images/ or delete this box</span></div>
+            <figcaption><span class="placeholder">[Figure caption]</span></figcaption>
+          </figure>
+        </article>
+
+        <article class="project">
+          <div class="project-body">
+            <p class="project-meta"><span>2025</span><span>with Nian Yao, Xihua Tao and Lingjiong Zhu</span></p>
+            <h4>Accelerating Langevin Monte Carlo sampling: a large deviations analysis</h4>
+            <p>Large deviation principles with explicit rate functions for mirror, high-order and Hessian-free high-resolution Langevin dynamics. Comparing rate functions shows when these dynamics, and underdamped Langevin, accelerate overdamped Langevin. Experiments cover Bayesian linear and logistic regression, including real data.</p>
+            <ul class="link-list">
+              <li><a href="https://arxiv.org/abs/2503.19066">Preprint (arXiv:2503.19066)</a></li>
+              <li><a href="">Code</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-body">
+            <p class="project-meta"><span class="project-tag">In progress</span><span>Numerical study</span></p>
+            <h4>Anchored nonreversible Langevin diffusions</h4>
+            <p>A numerical study built on a modular Python package: projected and unprojected Euler–Maruyama schemes, divergence-free circulation fields, and comparisons at matched computational cost using diagnostics suited to nonreversible chains.</p>
+            <ul class="link-list">
+              <li><a href="">Code</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-body">
+            <p class="project-meta"><span class="project-tag">In progress</span></p>
+            <h4>Learned nonreversibility</h4>
+            <p>Skew-symmetric drifts parametrized by neural networks for penalized nonreversible Langevin sampling, compared with reversible baselines.</p>
+            <ul class="link-list">
+              <li><a href="">Code</a></li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PUBLICATIONS
+       ============================================================ -->
+  <section class="section section--tint" id="publications" aria-labelledby="publications-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 id="publications-title">Publications</h2>
+        <p class="section-lede">Papers and preprints, newest first. Each entry is marked Published, Accepted, Preprint or In preparation. A full list is on <a href="https://scholar.google.com/citations?user=6ocxmR0AAAAJ&amp;hl=en">Google Scholar</a>.</p>
+      </header>
+
+      <h3 class="group-title">Papers and preprints</h3>
+      <!-- EDIT: publications.
+           HOW TO ADD A PUBLICATION: copy the TEMPLATE at the end of this list
+           (between the two "TEMPLATE" lines), paste it at the top of the list,
+           remove the comment markers around it, and fill it in.
+           * Status label: Published, Accepted, Preprint (or Submitted).
+           * Links: fill in the addresses you have. Links left as href="" are hidden.
+           * BibTeX: paste the entry between <code ...> and </code>, and give the
+             <code> an id that is not used anywhere else; the Copy button must
+             use the same id in data-copy="...". -->
+      <ul class="pub-list">
+
+        <li class="pub" id="ali2026penalized">
+          <div class="pub-side">
+            <span class="pub-year">2026</span>
+            <span class="pub-status">Preprint</span>
+          </div>
+          <div class="pub-main">
+            <h4 class="pub-title">Penalized Nonreversible Langevin for Constrained Sampling</h4>
+            <p class="pub-authors"><span class="pub-me">Pervez Ali</span>, Weihao Dong and Xiaoyu Wang</p>
+            <p class="pub-venue">arXiv:2609.25381</p>
+            <div class="pub-actions">
+              <ul class="link-list">
+                <li><a href="https://arxiv.org/pdf/2609.25381">PDF</a></li>
+                <li><a href="https://arxiv.org/abs/2609.25381">arXiv</a></li>
+                <li><a href="">DOI</a></li>
+                <li><a href="">Code</a></li>
+              </ul>
+              <details class="bibtex">
+                <summary>BibTeX</summary>
+                <div class="bibtex-panel">
+<pre><code id="bib-ali2026penalized">@misc{ali2026penalized,
+  title         = {Penalized Nonreversible {L}angevin for Constrained Sampling},
+  author        = {Ali, Pervez and Dong, Weihao and Wang, Xiaoyu},
+  year          = {2026},
+  eprint        = {2609.25381},
+  archivePrefix = {arXiv}
+}</code></pre>
+                  <button class="copy-button" type="button" data-copy="bib-ali2026penalized" data-copy-name="BibTeX" hidden>Copy BibTeX</button>
+                </div>
+              </details>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub" id="yao2025accelerating">
+          <div class="pub-side">
+            <span class="pub-year">2025</span>
+            <span class="pub-status">Preprint</span>
+          </div>
+          <div class="pub-main">
+            <h4 class="pub-title">Accelerating Langevin Monte Carlo Sampling: A Large Deviations Analysis</h4>
+            <p class="pub-authors">Nian Yao, <span class="pub-me">Pervez Ali</span>, Xihua Tao and Lingjiong Zhu</p>
+            <p class="pub-venue">arXiv:2503.19066</p>
+            <div class="pub-actions">
+              <ul class="link-list">
+                <li><a href="https://arxiv.org/pdf/2503.19066">PDF</a></li>
+                <li><a href="https://arxiv.org/abs/2503.19066">arXiv</a></li>
+                <li><a href="">DOI</a></li>
+                <li><a href="">Code</a></li>
+              </ul>
+              <details class="bibtex">
+                <summary>BibTeX</summary>
+                <div class="bibtex-panel">
+<pre><code id="bib-yao2025accelerating">@misc{yao2025accelerating,
+  title         = {Accelerating {L}angevin {M}onte {C}arlo Sampling: A Large Deviations Analysis},
+  author        = {Yao, Nian and Ali, Pervez and Tao, Xihua and Zhu, Lingjiong},
+  year          = {2025},
+  eprint        = {2503.19066},
+  archivePrefix = {arXiv}
+}</code></pre>
+                  <button class="copy-button" type="button" data-copy="bib-yao2025accelerating" data-copy-name="BibTeX" hidden>Copy BibTeX</button>
+                </div>
+              </details>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub" id="hussain2021weather">
+          <div class="pub-side">
+            <span class="pub-year">2021</span>
+            <span class="pub-status">Published</span>
+          </div>
+          <div class="pub-main">
+            <h4 class="pub-title">On Modelling and Pricing Weather Derivatives Driven by Nonlinear Brownian Motion</h4>
+            <p class="pub-authors">Javed Hussain and <span class="pub-me">Pervez Ali</span></p>
+            <p class="pub-venue">International Journal of Analysis and Applications 19(1), 29–46</p>
+            <div class="pub-actions">
+              <ul class="link-list">
+                <li><a href="https://etamaths.com/index.php/ijaa/article/view/2239">Journal page</a></li>
+                <li><a href="">PDF</a></li>
+                <li><a href="">DOI</a></li>
+              </ul>
+              <details class="bibtex">
+                <summary>BibTeX</summary>
+                <div class="bibtex-panel">
+<pre><code id="bib-hussain2021weather">@article{hussain2021weather,
+  title   = {On Modelling and Pricing Weather Derivatives Driven by Nonlinear {B}rownian Motion},
+  author  = {Hussain, Javed and Ali, Pervez},
+  journal = {International Journal of Analysis and Applications},
+  volume  = {19},
+  number  = {1},
+  pages   = {29--46},
+  year    = {2021}
+}</code></pre>
+                  <button class="copy-button" type="button" data-copy="bib-hussain2021weather" data-copy-name="BibTeX" hidden>Copy BibTeX</button>
+                </div>
+              </details>
+            </div>
+          </div>
+        </li>
+
+        <!-- ===== TEMPLATE: copy from here ...
+        <li class="pub" id="surname2027short">
+          <div class="pub-side">
+            <span class="pub-year">2027</span>
+            <span class="pub-status">Accepted</span>
+          </div>
+          <div class="pub-main">
+            <h4 class="pub-title">Title of the Paper</h4>
+            <p class="pub-authors"><span class="pub-me">Pervez Ali</span>, Coauthor One and Coauthor Two</p>
+            <p class="pub-venue">To appear in Journal Name</p>
+            <div class="pub-actions">
+              <ul class="link-list">
+                <li><a href="">PDF</a></li>
+                <li><a href="">arXiv</a></li>
+                <li><a href="">DOI</a></li>
+                <li><a href="">Code</a></li>
+              </ul>
+              <details class="bibtex">
+                <summary>BibTeX</summary>
+                <div class="bibtex-panel">
+<pre><code id="bib-surname2027short">@article{surname2027short,
+  title   = {Title of the Paper},
+  author  = {Ali, Pervez and One, Coauthor},
+  journal = {Journal Name},
+  year    = {2027}
+}</code></pre>
+                  <button class="copy-button" type="button" data-copy="bib-surname2027short" data-copy-name="BibTeX" hidden>Copy BibTeX</button>
+                </div>
+              </details>
+            </div>
+          </div>
+        </li>
+        ... to here. TEMPLATE ===== -->
+
+      </ul>
+
+      <h3 class="group-title group-title--spaced">Work in progress</h3>
+      <!-- EDIT: manuscripts in preparation. Replace the placeholder entry below,
+           or delete the whole <li> ... </li> (and this heading) if you have none to list. -->
+      <ul class="pub-list">
+        <li class="pub pub--draft">
+          <div class="pub-side">
+            <span class="pub-year"><span class="placeholder">[Year]</span></span>
+            <span class="pub-status">In preparation</span>
+          </div>
+          <div class="pub-main">
+            <h4 class="pub-title"><span class="placeholder">[Working title of manuscript]</span></h4>
+            <p class="pub-authors"><span class="placeholder">[Authors]</span></p>
+            <p class="pub-venue">Manuscript in preparation</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div class="about-bio">
+        <header class="section-head">
+          <h2 id="about-title">About</h2>
+        </header>
+        <!-- EDIT: short biography (written in the third person so others can reuse it) -->
+        <p>Pervez Ali is a PhD candidate in the Department of Mathematics at Florida State University, advised by Dr.&nbsp;Lingjiong Zhu, and a Fulbright Scholar. His research is on sampling algorithms based on stochastic dynamics, including Langevin methods, nonreversible dynamics and constrained sampling.</p>
+        <p>Before starting his PhD in 2022, he was a Lecturer in Mathematics at Sukkur IBA University in Pakistan for five years, where he also completed an MS in Mathematics. At Florida State he has served as vice president of the SIAM Student Chapter.</p>
+      </div>
+
+      <div class="about-facts">
+        <h3 class="facts-title">Education</h3>
+        <!-- EDIT: education -->
+        <ul class="edu-list">
+          <li class="edu-item">
+            <span class="edu-years">2022–2027</span>
+            <div>
+              <p class="edu-degree">PhD in Mathematics</p>
+              <p class="edu-place">Florida State University, Tallahassee, Florida</p>
+              <p class="edu-detail">Expected June&nbsp;2027 · Advisor: Dr.&nbsp;Lingjiong&nbsp;Zhu</p>
+              <p class="edu-detail">Dissertation: <span class="placeholder">[Dissertation title]</span></p>
+            </div>
+          </li>
+          <li class="edu-item">
+            <span class="edu-years">2019</span>
+            <div>
+              <p class="edu-degree">MS in Mathematics</p>
+              <p class="edu-place">Sukkur IBA University, Pakistan</p>
+              <p class="edu-detail">Probability, stochastic processes and mathematical finance</p>
+            </div>
+          </li>
+          <li class="edu-item">
+            <span class="edu-years">2016</span>
+            <div>
+              <p class="edu-degree">BS in Mathematics</p>
+              <p class="edu-place">University of Sindh, Jamshoro, Pakistan</p>
+            </div>
+          </li>
+        </ul>
+
+        <h3 class="facts-title facts-title--spaced">Selected honors</h3>
+        <!-- EDIT: honors -->
+        <ul class="honor-list">
+          <li><span>Educator of the Year Award</span><span class="honor-year">2023</span></li>
+          <li><span>Fulbright Scholarship for PhD study in the United States</span><span class="honor-year">2022</span></li>
+          <li><span>Prime Minister’s Scholarship for MS study</span><span class="honor-year">2018</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TEACHING
+       ============================================================ -->
+  <section class="section section--tint" id="teaching" aria-labelledby="teaching-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 id="teaching-title">Teaching</h2>
+        <!-- EDIT: teaching overview -->
+        <p class="section-lede">I have taught undergraduate mathematics since 2017: first as a lecturer in Pakistan, and since 2022 as an instructor and teaching assistant at Florida State University.</p>
+      </header>
+
+      <!-- EDIT: teaching. Each row of a table is one course:
+             <tr><th scope="row">Course</th><td data-label="Role">Role</td><td data-label="Terms">Terms</td></tr>
+           Keep the data-label="..." parts; they label each cell on phones. -->
+      <div class="teaching-grid">
+        <article class="teaching-block">
+          <h3>Florida State University</h3>
+          <p class="teaching-meta">Graduate Teaching Assistant and Instructor · Aug&nbsp;2022&nbsp;–&nbsp;present</p>
+          <table class="course-table">
+            <caption class="visually-hidden">Courses at Florida State University</caption>
+            <thead>
+              <tr><th scope="col">Course</th><th scope="col">Role</th><th scope="col">Terms</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Calculus I</th><td data-label="Role">Instructor</td><td data-label="Terms"><span class="placeholder">[e.g. Fall 2024]</span></td></tr>
+              <tr><th scope="row">Calculus II</th><td data-label="Role">Instructor</td><td data-label="Terms"><span class="placeholder">[Terms]</span></td></tr>
+              <tr><th scope="row">Calculus III</th><td data-label="Role">Instructor</td><td data-label="Terms"><span class="placeholder">[Terms]</span></td></tr>
+              <tr><th scope="row">Calculus, Trigonometry, College Algebra</th><td data-label="Role">Teaching assistant</td><td data-label="Terms"><span class="placeholder">[Terms]</span></td></tr>
+              <tr><th scope="row">Math Resource Center</th><td data-label="Role">Tutor</td><td data-label="Terms"><span class="placeholder">[Terms]</span></td></tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="teaching-block">
+          <h3>Sukkur IBA University, Pakistan</h3>
+          <p class="teaching-meta">Lecturer in Mathematics · Aug&nbsp;2017&nbsp;–&nbsp;Jul&nbsp;2022</p>
+          <table class="course-table">
+            <caption class="visually-hidden">Courses at Sukkur IBA University</caption>
+            <thead>
+              <tr><th scope="col">Course</th><th scope="col">Role</th><th scope="col">Terms</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Calculus I, II and III</th><td data-label="Role">Lecturer</td><td data-label="Terms"><span class="placeholder">[Terms]</span></td></tr>
+            </tbody>
+          </table>
+          <p class="teaching-also"><span class="teaching-also-label">Also taught</span> Linear Algebra, Ordinary Differential Equations, Scientific Computing, Probability, Statistics, Inferential Statistics, Business Mathematics, Business Statistics and Actuarial Mathematics.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CV AND CONTACT
+       ============================================================ -->
+  <div class="section">
+    <div class="container split">
+
+      <section id="cv" aria-labelledby="cv-title">
+        <header class="section-head">
+          <h2 id="cv-title">CV</h2>
+        </header>
+        <p>My CV lists my education, publications, talks, teaching and awards.</p>
+        <!-- The download button appears by itself once your CV is saved as
+             assets/cv/Pervez_Ali_CV.pdf (see README.md). Keep the file name exactly. -->
+        <p class="cv-download" data-cv hidden><a class="button button--primary" href="assets/cv/Pervez_Ali_CV.pdf" download="Pervez_Ali_CV.pdf">Download CV (PDF)</a></p>
+        <p class="cv-fallback" data-cv-fallback>A current CV is available on request. Please <a href="#contact">email me</a>.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <header class="section-head">
+          <h2 id="contact-title">Contact</h2>
+        </header>
+        <!-- EDIT: email, address and profile links -->
+        <p>Email is the best way to reach me.</p>
+        <p class="contact-email">
+          <a id="email-address" href="mailto:pa22g@fsu.edu">pa22g@fsu.edu</a>
+          <button class="copy-button" type="button" data-copy="email-address" data-copy-name="Email address" aria-label="Copy email address" hidden>Copy</button>
+        </p>
+        <address class="contact-address">
+          Department of Mathematics<br>
+          Florida State University<br>
+          1017 Academic Way<br>
+          Tallahassee, FL 32306, USA
+        </address>
+        <h3 class="facts-title facts-title--spaced">Academic profiles</h3>
+        <!-- Profile links with an empty address (href="") are hidden automatically. -->
+        <ul class="link-list profile-links">
+          <li><a href="https://scholar.google.com/citations?user=6ocxmR0AAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0009-0006-0447-9532">ORCID</a></li>
+          <li><a href="https://github.com/pervezali1">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/pervez-ali-546958163">LinkedIn</a></li>
+          <li><a href="">arXiv author page</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Pervez Ali</p>
+    <p><a href="#top">Back to top</a></p>
+  </div>
+</footer>
+
+<!-- Announces "copied" messages to screen-reader users. Leave as is. -->
+<p id="copy-status" class="visually-hidden" role="status" aria-live="polite"></p>
+</body>
+</html>
