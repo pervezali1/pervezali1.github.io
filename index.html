@@ -139,15 +139,18 @@
         </li>
         <li class="theme">
           <p class="theme-status">Current research</p>
-          <h3>Constrained sampling and stochastic algorithms</h3>
-          <p class="theme-question">How can we sample efficiently from a distribution restricted to a constrained set, especially when only noisy gradients are available?</p>
-          <p>Many models in statistics and machine learning have parameters that must stay in a bounded or convex set. Penalty, projection and reflection methods handle the constraint in different ways, and stochastic-gradient versions make them practical for large datasets. I study how nonreversible dynamics can be combined with these methods, and what can be proved about their accuracy.</p>
+          <h3>Constrained Sampling with Penalized Nonreversible Langevin Algorithms</h3>
+          <p class="theme-question">How can we combine penalization and nonreversible Langevin dynamics to efficiently sample from probability distributions supported on constrained sets?</p>
+          <p>Many models in statistics and machine learning restrict parameters to compact convex sets. We develop Langevin sampling algorithms that combine squared-distance penalties with nonreversible dynamics. 
+            Our research establishes convergence and accuracy guarantees for full-gradient and stochastic-gradient methods, accounting for both numerical discretization and the approximation introduced by penalization. 
+            We also investigate when nonreversibility can accelerate convergence, combining theoretical analysis with numerical experiments on constrained sampling problems./p>
         </li>
         <li class="theme theme--future">
           <p class="theme-status">Future direction</p>
-          <h3>Connections between sampling and generative AI</h3>
-          <p class="theme-question">What can the analysis of sampling algorithms say about generative models that are built on stochastic dynamics?</p>
-          <p>Diffusion-based generative models create new data by simulating stochastic differential equations, so questions about discretization error, convergence and efficient dynamics carry over from sampling. This is a direction I plan to develop in postdoctoral work.</p>
+          <h3>Sampling Theory for Generative Modeling</h3>
+          <p class="theme-question">How can we generate samples more accurately and at lower computational cost?</p>
+          <p> Building on my research in Langevin dynamics, I plan to investigate how numerical discretization and the choice of sampling dynamics affect convergence and approximation error in diffusion-based generative models. 
+            In my postdoctoral work, I aim to combine theoretical analysis with numerical experiments to develop sampling algorithms that achieve a desired accuracy with less computation.</p>
         </li>
       </ul>
 
