@@ -96,7 +96,8 @@
         window.clearTimeout(timer);
         timer = window.setTimeout(function () { button.textContent = label; }, 2500);
       };
-      copyText(target.textContent.trim()).then(function () {
+      var text = button.getAttribute('data-copy-value') || target.textContent.trim();
+      copyText(text).then(function () {
         button.textContent = 'Copied';
         announce(name + ' copied to the clipboard.');
         restore();
@@ -107,6 +108,17 @@
         restore();
       });
     });
+  });
+
+  /* ---------- Email link ----------
+     The address is stored in two parts in index.html so that spam bots reading
+     the page cannot collect it. Here it is joined to make a working link, and
+     handed to the Copy button. */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-email-user]'), function (link) {
+    var address = link.getAttribute('data-email-user') + '@' + link.getAttribute('data-email-domain');
+    link.setAttribute('href', 'mailto:' + address);
+    var copyButton = document.querySelector('[data-copy="' + link.id + '"]');
+    if (copyButton) { copyButton.setAttribute('data-copy-value', address); }
   });
 
   /* ---------- 3. Download CV button ---------- */

@@ -104,7 +104,7 @@ Most information appears only once, so you only need to change it in one place.
 
 | Information | Section of `index.html` |
 |---|---|
-| Name, "PhD Researcher in …", university | INTRODUCTION (`<h1>` and the two lines below it) |
+| Name, "PhD Candidate in …", university | INTRODUCTION (`<h1>` and the two lines below it) |
 | Introduction paragraph | INTRODUCTION, `class="hero-intro"` |
 | "Seeking postdoctoral opportunities starting …" | INTRODUCTION, `class="availability"` |
 | Research overview and the three themes | RESEARCH |
