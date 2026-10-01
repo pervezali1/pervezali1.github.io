@@ -90,13 +90,10 @@ with `EDIT:`; search for `EDIT:` to jump between sections.
 
 ### Placeholders in this version
 
-| Where | Placeholder | What to do |
-|---|---|---|
-| Research → Selected projects (first project) | Yellow "Optional figure" box and `[Figure caption]` | Add a figure (see [section 6](#6-other-common-edits)) or delete the box. |
-| Publications → Work in progress | `[Year]`, `[Working title of manuscript]`, `[Authors]` | Fill in a manuscript in preparation, or delete the entry and the "Work in progress" heading. |
-| About → Education | `[Dissertation title]` | Add the title, or delete that line. |
-| Teaching → Florida State University | `[e.g. Fall 2024]` and four `[Terms]` | Terms you taught each course. |
-| Teaching → Sukkur IBA University | `[Terms]` | Terms or years for Calculus I–III. |
+All placeholders from the first version have been filled in or hidden. The
+"Work in progress" list under Publications is hidden inside a comment; remove
+the comment markers to show it again. To check for anything still highlighted,
+search `index.html` for `class="placeholder"`.
 
 ### Where each piece of information lives
 
@@ -108,8 +105,7 @@ Most information appears only once, so you only need to change it in one place.
 | Introduction paragraph | INTRODUCTION, `class="hero-intro"` |
 | "Seeking postdoctoral opportunities starting …" | INTRODUCTION, `class="availability"` |
 | Research overview and the three themes | RESEARCH |
-| Selected projects | RESEARCH, `class="projects"` |
-| Publications | PUBLICATIONS |
+| Publications, with a short summary of each paper | PUBLICATIONS |
 | Short biography, education, honors | ABOUT |
 | Courses | TEACHING |
 | Email, postal address, profile links | CV AND CONTACT |
@@ -191,6 +187,7 @@ first. Each entry is one `<li class="pub" …> … </li>` block.
     <h4 class="pub-title">Title of the Paper</h4>
     <p class="pub-authors"><span class="pub-me">Pervez Ali</span>, Coauthor One and Coauthor Two</p>
     <p class="pub-venue">To appear in Journal Name</p>
+    <p class="pub-summary">One or two sentences on what the paper does.</p>   <!-- optional -->
     <div class="pub-actions">
       <ul class="link-list">
         <li><a href="https://arxiv.org/pdf/2701.12345">PDF</a></li>
@@ -219,6 +216,9 @@ Notes:
   public go in the separate "Work in progress" list below it, with the label
   "In preparation".
 - **Your name:** wrap it in `<span class="pub-me">…</span>` so it appears in bold.
+- **Summary:** the `<p class="pub-summary">…</p>` line holds a plain-language
+  sentence or two about the paper. It is optional; delete the line if you don't
+  want one.
 - **Links:** fill in the ones you have. Any link left as `href=""` is hidden
   automatically, so you never show a button that goes nowhere. You can also
   delete the whole `<li>…</li>` line for a link you will never need.
@@ -237,23 +237,12 @@ Notes:
 
 ## 6. Other common edits
 
-**Add a project.** In RESEARCH, copy one `<article class="project"> … </article>`
-block, paste it where you want it, and change the text. The small grey line
-above the title is for the year and collaborators; for unfinished work use
-`<span class="project-tag">In progress</span>`.
-
-**Add a project figure.** Save the image (PNG or JPG, about 800 px wide) in
-`assets/images/`. In the first project, replace the whole
-`<div class="figure-placeholder">…</div>` with
-
-```html
-<img src="assets/images/my-figure.png" alt="Short description of what the figure shows" width="800" height="600">
-```
-
-(use the image's real width and height), then replace `[Figure caption]` with
-your caption. To remove the figure area entirely, delete everything from
-`<figure class="project-figure">` to `</figure>`. The same `<figure>` block can
-be copied into any other project, just before its closing `</article>`.
+**Selected projects.** The site used to have a "Selected projects" list under
+Research. It was removed because it repeated the papers already listed under
+Publications. Each publication now has a short summary instead. If you later
+want a projects section again (for example for software or work in progress),
+ask Claude to add one, or restore it from the repository's history (the
+"Add academic website" commit).
 
 **Change a research theme's status.** Each theme starts with a status line
 ("Current research" or "Future direction"). A future theme also has the class
@@ -387,10 +376,6 @@ CV section shows the "available on request" sentence.
 
 - [ ] Photo saved as `assets/images/profile.jpg` (optional; the initials look fine without it)
 - [ ] CV saved as `assets/cv/Pervez_Ali_CV.pdf`
-- [ ] Dissertation title (or delete the line)
-- [ ] Teaching terms for each course
-- [ ] First project: add a figure or delete the figure box
-- [ ] "Work in progress" entry: fill in or delete
 - [ ] Optional links: code repositories, arXiv author page
 - [ ] Double-check dates and details against your CV (for example, your expected PhD date)
 - [ ] Site address: set to `https://pervezali1.github.io`. If you publish anywhere else, change the three `<!-- address -->` lines at the top of `index.html`

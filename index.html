@@ -153,69 +153,6 @@
             I aim to combine theoretical analysis with numerical experiments to develop sampling algorithms that achieve a desired accuracy with less computation.</p>
         </li>
       </ul>
-
-      <h3 class="subsection-title" id="projects">Selected projects</h3>
-      <!-- EDIT: projects. To add one, copy a whole <article class="project"> ... </article>
-           block and change the text. Links with an empty address (href="") are hidden
-           automatically, so you can leave "Code" empty until you have a link.
-           Optional figure: see the first project. -->
-      <div class="projects">
-
-        <article class="project">
-          <div class="project-body">
-            <p class="project-meta"><span>2026</span><span>with Weihao Dong and Xiaoyu Wang</span></p>
-            <h4>Penalized nonreversible Langevin for constrained sampling</h4>
-            <p>Sampling on a compact convex set by combining a squared-distance penalty with a skew-symmetric perturbation of Langevin dynamics. The preprint gives nonasymptotic bounds relative to the penalized target: in total variation with full gradients, including nonconvex potentials, and in 2-Wasserstein distance with stochastic gradients. For a quadratic model, tuning the perturbation improves the sufficient number of iterations from linear to logarithmic in the curvature ratio.</p>
-            <ul class="link-list">
-              <li><a href="https://arxiv.org/abs/2609.25381">Preprint (arXiv:2609.25381)</a></li>
-              <li><a href="">Code</a></li>
-            </ul>
-          </div>
-          <!-- EDIT: optional figure. To use one: save the image in assets/images/,
-               then replace the whole <div class="figure-placeholder">...</div> below with
-                 <img src="assets/images/YOUR-FIGURE.png" alt="What the figure shows" width="800" height="600">
-               and write a caption. To remove it, delete from <figure> to </figure>. -->
-          <!-- <figure class="project-figure">
-            <div class="figure-placeholder"><span>Optional figure<br>Add an image to assets/images/ or delete this box</span></div>
-            <figcaption><span class="placeholder">[Figure caption]</span></figcaption>
-          </figure> -->
-        </article>
-
-        <article class="project">
-          <div class="project-body">
-            <p class="project-meta"><span>2025</span><span>with Nian Yao, Xihua Tao and Lingjiong Zhu</span></p>
-            <h4>Accelerating Langevin Monte Carlo sampling: a large deviations analysis</h4>
-            <p>Large deviation principles with explicit rate functions for mirror, high-order and Hessian-free high-resolution Langevin dynamics. Comparing rate functions shows when these dynamics, and underdamped Langevin, accelerate overdamped Langevin. Experiments cover Bayesian linear and logistic regression, including real data.</p>
-            <ul class="link-list">
-              <li><a href="https://arxiv.org/abs/2503.19066">Preprint (arXiv:2503.19066)</a></li>
-              <li><a href="">Code</a></li>
-            </ul>
-          </div>
-        </article>
-<!--
-        <article class="project">
-          <div class="project-body">
-            <p class="project-meta"><span class="project-tag">In progress</span><span>Numerical study</span></p>
-            <h4>Anchored nonreversible Langevin diffusions</h4>
-            <p>A numerical study built on a modular Python package: projected and unprojected Euler–Maruyama schemes, divergence-free circulation fields, and comparisons at matched computational cost using diagnostics suited to nonreversible chains.</p>
-            <ul class="link-list">
-              <li><a href="">Code</a></li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-body">
-            <p class="project-meta"><span class="project-tag">In progress</span></p>
-            <h4>Learned nonreversibility</h4>
-            <p>Skew-symmetric drifts parametrized by neural networks for penalized nonreversible Langevin sampling, compared with reversible baselines.</p>
-            <ul class="link-list">
-              <li><a href="">Code</a></li>
-            </ul>
-          </div>
-        </article> -->
-
-      </div>
     </div>
   </section>
 
@@ -235,6 +172,7 @@
            (between the two "TEMPLATE" lines), paste it at the top of the list,
            remove the comment markers around it, and fill it in.
            * Status label: Published, Accepted, Preprint (or Submitted).
+           * Summary: optional one or two sentences in <p class="pub-summary">; delete the line if not needed.
            * Links: fill in the addresses you have. Links left as href="" are hidden.
            * BibTeX: paste the entry between <code ...> and </code>, and give the
              <code> an id that is not used anywhere else; the Copy button must
@@ -250,6 +188,7 @@
             <h4 class="pub-title">Penalized Nonreversible Langevin for Constrained Sampling</h4>
             <p class="pub-authors"><span class="pub-me">Pervez Ali</span>, Weihao Dong and Xiaoyu Wang</p>
             <p class="pub-venue">arXiv:2609.25381</p>
+            <p class="pub-summary">Sampling on a compact convex set by combining a squared-distance penalty with a skew-symmetric perturbation of Langevin dynamics. The preprint gives nonasymptotic bounds relative to the penalized target: in total variation with full gradients, including nonconvex potentials, and in 2-Wasserstein distance with stochastic gradients. For a quadratic model, tuning the perturbation improves the sufficient number of iterations from linear to logarithmic in the curvature ratio.</p>
             <div class="pub-actions">
               <ul class="link-list">
                 <li><a href="https://arxiv.org/pdf/2609.25381">PDF</a></li>
@@ -283,6 +222,7 @@
             <h4 class="pub-title">Accelerating Langevin Monte Carlo Sampling: A Large Deviations Analysis</h4>
             <p class="pub-authors">Nian Yao, <span class="pub-me">Pervez Ali</span>, Xihua Tao and Lingjiong Zhu</p>
             <p class="pub-venue">arXiv:2503.19066</p>
+            <p class="pub-summary">Large deviation principles with explicit rate functions for mirror, high-order and Hessian-free high-resolution Langevin dynamics. Comparing rate functions shows when these dynamics, and underdamped Langevin, accelerate overdamped Langevin. Experiments cover Bayesian linear and logistic regression, including real data.</p>
             <div class="pub-actions">
               <ul class="link-list">
                 <li><a href="https://arxiv.org/pdf/2503.19066">PDF</a></li>
@@ -316,6 +256,7 @@
             <h4 class="pub-title">On Modelling and Pricing Weather Derivatives Driven by Nonlinear Brownian Motion</h4>
             <p class="pub-authors">Javed Hussain and <span class="pub-me">Pervez Ali</span></p>
             <p class="pub-venue">International Journal of Analysis and Applications 19(1), 29–46</p>
+            <p class="pub-summary">Estimates for risk-neutral prices of temperature-based weather derivatives when temperature follows a G-stochastic differential equation driven by G-Brownian motion.</p>
             <div class="pub-actions">
               <ul class="link-list">
                 <li><a href="https://etamaths.com/index.php/ijaa/article/view/2239">Journal page</a></li>
@@ -351,6 +292,7 @@
             <h4 class="pub-title">Title of the Paper</h4>
             <p class="pub-authors"><span class="pub-me">Pervez Ali</span>, Coauthor One and Coauthor Two</p>
             <p class="pub-venue">To appear in Journal Name</p>
+            <p class="pub-summary">Optional: one or two sentences on what the paper does.</p>
             <div class="pub-actions">
               <ul class="link-list">
                 <li><a href="">PDF</a></li>
