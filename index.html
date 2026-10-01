@@ -472,14 +472,14 @@
           <h2 id="contact-title">Contact</h2>
         </header>
         <!-- EDIT: email, address and profile links.
-             To keep spam bots from collecting it, the email address never appears whole
-             in this file: it is shown as "user [at] domain" and stored in two parts
-             (data-email-user and data-email-domain). script.js joins them in the
-             visitor's browser to make the link and the Copy button work.
+             To keep spam bots from collecting it, the email address is plain text
+             (not a link) and never appears whole in this file: it is shown as
+             "user [at] domain" and stored in two parts (data-email-user and
+             data-email-domain). The Copy button joins them only when clicked.
              To change the address, edit both parts and the visible text. -->
         <p>Email is the best way to reach me.</p>
         <p class="contact-email">
-          <a id="email-address" data-email-user="pa22g" data-email-domain="fsu.edu">pa22g [at] fsu [dot] edu</a>
+          <span id="email-address" class="email-address" data-email-user="pa22g" data-email-domain="fsu.edu">pa22g [at] fsu [dot] edu</span>
           <button class="copy-button" type="button" data-copy="email-address" data-copy-name="Email address" aria-label="Copy email address" hidden>Copy</button>
         </p>
         <address class="contact-address">

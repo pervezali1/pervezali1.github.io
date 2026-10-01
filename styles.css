@@ -977,12 +977,11 @@ a:hover { color: var(--navy); text-decoration-thickness: 2px; }
   gap: 0.6rem 1rem;
   margin-top: 1rem;
 }
-.contact-email a {
+.email-address {
   font-size: clamp(1.3rem, 2.6vw, 1.6rem);
   overflow-wrap: anywhere;
+  color: var(--navy);
 }
-/* Before script.js runs (or without JavaScript) the address is plain text */
-.contact-email a:not([href]) { color: var(--navy); text-decoration: none; }
 .contact-address {
   margin-top: 1.25rem;
   font-style: normal;

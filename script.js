@@ -4,6 +4,7 @@
    The page is fully readable without this file. It adds:
      1. a Menu button that folds the navigation on small screens
      2. "Copy" buttons for BibTeX entries and the email address
+        (the email is shown as plain text, never as a link)
      3. the "Download CV" button, shown only when the CV file exists
    You should not need to edit this file.
    ================================================================= */
@@ -96,7 +97,10 @@
         window.clearTimeout(timer);
         timer = window.setTimeout(function () { button.textContent = label; }, 2500);
       };
-      var text = button.getAttribute('data-copy-value') || target.textContent.trim();
+      // An email address is stored in two parts and joined only at the moment of copying
+      var text = target.hasAttribute('data-email-user')
+        ? target.getAttribute('data-email-user') + '@' + target.getAttribute('data-email-domain')
+        : target.textContent.trim();
       copyText(text).then(function () {
         button.textContent = 'Copied';
         announce(name + ' copied to the clipboard.');
@@ -108,17 +112,6 @@
         restore();
       });
     });
-  });
-
-  /* ---------- Email link ----------
-     The address is stored in two parts in index.html so that spam bots reading
-     the page cannot collect it. Here it is joined to make a working link, and
-     handed to the Copy button. */
-  Array.prototype.forEach.call(document.querySelectorAll('[data-email-user]'), function (link) {
-    var address = link.getAttribute('data-email-user') + '@' + link.getAttribute('data-email-domain');
-    link.setAttribute('href', 'mailto:' + address);
-    var copyButton = document.querySelector('[data-copy="' + link.id + '"]');
-    if (copyButton) { copyButton.setAttribute('data-copy-value', address); }
   });
 
   /* ---------- 3. Download CV button ---------- */
