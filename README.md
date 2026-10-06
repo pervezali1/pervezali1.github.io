@@ -81,7 +81,7 @@ Dissertation: <span class="placeholder">[Dissertation title]</span>
 Replace the whole `<span …>…</span>`, including the tags, with your text:
 
 ```html
-Dissertation: Nonreversible Langevin Dynamics for Constrained Sampling
+Dissertation: Non-Reversible Langevin Dynamics for Unconstrained and Constrained Sampling
 ```
 
 **To find them all,** open `index.html` and search (Ctrl+F or Cmd+F) for
