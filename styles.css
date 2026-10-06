@@ -391,6 +391,12 @@ a:hover { color: var(--navy); text-decoration-thickness: 2px; }
   text-transform: uppercase;
   color: var(--teal);
 }
+.hero-affiliation a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+}
+.hero-affiliation a:hover { color: var(--navy); text-decoration-thickness: 2px; }
 .hero-intro {
   max-width: 36rem;
   margin-top: 1.6rem;
