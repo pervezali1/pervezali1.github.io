@@ -871,6 +871,10 @@ a:hover { color: var(--navy); text-decoration-thickness: 2px; }
 .edu-degree { font-weight: 600; }
 .edu-place { color: var(--navy-soft); }
 .edu-detail { font-size: 0.98rem; color: var(--muted); }
+.edu-place a,
+.edu-detail a { color: inherit; }
+.edu-place a:hover,
+.edu-detail a:hover { color: var(--navy); }
 
 .honor-list { list-style: none; border-top: 1px solid var(--rule); }
 .honor-list li {
