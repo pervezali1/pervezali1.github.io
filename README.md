@@ -9,6 +9,7 @@ pervez-ali-website/
 ├── index.html      All the text on the site. This is the file you will edit.
 ├── styles.css      Colours, fonts and layout. Rarely needs changes.
 ├── script.js       Small extras: phone menu, Copy buttons, CV button.
+├── demo.js         The interactive sampler demo in the Research section.
 ├── README.md       This guide.
 └── assets/
     ├── images/     Your photo (when added), icons, sharing image, artwork.
@@ -263,6 +264,19 @@ there, empty.
 
 **Change colours or fonts.** Open `styles.css`; everything is defined once in
 the `:root { … }` block near the top, with a comment on each colour.
+
+**The interactive demo.** Under the research themes, two panels compare
+standard and nonreversible Langevin dynamics on a stretched two-dimensional
+Gaussian, with a chart of the exact Kullback–Leibler divergence to the target.
+The animation is drawn by `demo.js`; it starts when the demo scrolls into view
+(not for visitors who have asked their device to reduce motion), pauses when it
+scrolls away, and stops after one run. Its settings (target shape, step size,
+number of points, starting point, run length) are listed at the top of
+`demo.js`. If you change them, also update the caption under the demo in
+`index.html`, which states the default values. Visitors without JavaScript see
+a snapshot, `assets/images/langevin-demo.png`, instead. To remove the demo,
+delete the block between `INTERACTIVE DEMO` and `END OF DEMO` in `index.html`
+and the `demo.js` line near the top of that file.
 
 ---
 

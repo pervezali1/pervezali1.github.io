@@ -45,6 +45,7 @@
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css">
 <script src="script.js" defer></script>
+<script src="demo.js" defer></script>
 </head>
 
 <body>
@@ -153,6 +154,53 @@
             I aim to combine theoretical analysis with numerical experiments to develop sampling algorithms that achieve a desired accuracy with less computation.</p>
         </li>
       </ul>
+
+      <!-- ============ INTERACTIVE DEMO ============
+           The animation is drawn by demo.js (its settings are at the top of that file).
+           To remove the demo, delete everything from here to "END OF DEMO" and the
+           demo.js line near the top of this file. -->
+      <div class="demo" data-demo>
+        <div class="demo-head">
+          <p class="demo-eyebrow">Interactive demo</p>
+          <h3>How a nonreversible drift can speed up sampling</h3>
+          <p class="demo-intro">Both panels sample the same stretched Gaussian distribution, starting from the same point and using the same random noise. The right panel adds the drift −<i>J</i>∇<i>U</i>, which leaves the target unchanged but makes the points circulate around it, so they settle much sooner. Drag the slider to change the strength of the drift.</p>
+        </div>
+
+        <figure class="demo-figure">
+          <noscript>
+            <img class="demo-fallback" src="assets/images/langevin-demo.png" width="1512" height="1166" alt="Snapshot of the demo at time 2.5: the standard sampler's points are still bunched near the starting end of the target, while the nonreversible sampler's points already cover it. The chart shows the nonreversible sampler's distance to the target falling much faster.">
+          </noscript>
+          <div class="demo-live" data-demo-live hidden>
+            <div class="demo-grid">
+              <div class="demo-cell">
+                <p class="demo-label demo-label--standard">Standard Langevin <span><i>J</i> = 0</span></p>
+                <canvas class="demo-canvas" data-demo-standard aria-hidden="true"></canvas>
+              </div>
+              <div class="demo-cell">
+                <p class="demo-label demo-label--nonrev">Nonreversible Langevin <span><i>J</i> ≠ 0</span></p>
+                <canvas class="demo-canvas" data-demo-nonrev aria-hidden="true"></canvas>
+              </div>
+              <div class="demo-cell demo-cell--chart">
+                <p class="demo-label">Distance to the target <span>log scale</span></p>
+                <canvas class="demo-canvas demo-canvas--chart" data-demo-chart aria-hidden="true"></canvas>
+              </div>
+            </div>
+            <div class="demo-controls">
+              <button type="button" class="demo-button" data-demo-toggle>Play</button>
+              <button type="button" class="demo-button demo-button--quiet" data-demo-restart>Restart</button>
+              <div class="demo-slider">
+                <label for="demo-delta">Drift strength <i>δ</i></label>
+                <input id="demo-delta" type="range" min="0" max="4" step="0.1" value="3" data-demo-delta>
+                <output for="demo-delta" data-demo-delta-out>3.0</output>
+              </div>
+              <p class="demo-time"><i>t</i> = <span data-demo-time>0.0</span></p>
+            </div>
+            <p class="demo-readout" data-demo-readout aria-live="polite"></p>
+          </div>
+          <figcaption>The target is a Gaussian whose long axis is four times its short axis; the grey ellipses mark 1, 2 and 3 standard deviations, and the dark line follows the average position of the points. Both samplers take Euler–Maruyama steps of size <i>h</i>&nbsp;=&nbsp;0.005 with 500 points, and on the right <i>J</i>&nbsp;=&nbsp;<i>δ</i><span class="matrix" role="img" aria-label="times the matrix with rows 0, 1 and minus 1, 0"><span>0</span><span>1</span><span>−1</span><span>0</span></span>. The chart shows the exact Kullback–Leibler divergence between the distribution of the points and the target. For Gaussian targets, the best choice of <i>J</i> raises the convergence rate from that of the slowest direction to the average over all directions (<a href="https://doi.org/10.1214/aoap/1177005371">Hwang, Hwang-Ma and Sheu, 1993</a>; <a href="https://arxiv.org/abs/1212.0876">Lelièvre, Nier and Pavliotis, 2013</a>).</figcaption>
+        </figure>
+      </div>
+      <!-- END OF DEMO -->
     </div>
   </section>
 
