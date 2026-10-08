@@ -257,6 +257,11 @@ ask Claude to add one, or restore it from the repository's history (the
 
 Keep the `data-label="…"` parts; on phones they label each line.
 
+**Add a talk.** Under Publications, the Talks list is newest first. Copy one
+`<li class="pub talk"> … </li>` block, paste it at the top of the list, and
+change the year, month, title and event. To link your slides, put their address
+in the empty `href=""` on the Slides line; while it is empty, the link stays hidden.
+
 **Add or remove a profile link.** In CONTACT, profile links are a list of
 `<li><a href="…">Name</a></li>`. Add a line for a new profile, or leave the
 address empty (`href=""`) to hide one. An "arXiv author page" line is already
