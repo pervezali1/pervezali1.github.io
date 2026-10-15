@@ -122,7 +122,7 @@ and for sharing), and the site address, `https://pervezali1.github.io` (three li
 
 - Change only the text **between** tags. Keep everything inside `< >`.
 - Write `&amp;` for an ampersand (&) in addresses and text.
-- `&nbsp;` is a space that never breaks a line; it keeps "July 2027" together.
+- `&nbsp;` is a space that never breaks a line; it keeps "Summer 2027" together.
 - Make one change, save, refresh, check. If something breaks, undo (Ctrl+Z / Cmd+Z).
 
 ---
